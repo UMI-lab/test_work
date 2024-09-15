@@ -15,16 +15,11 @@ add_executable(test_work main.cpp
     fighter.h fighter.cpp
     bulletfactory.h bulletfactory.cpp)
 find_package(OpenGL REQUIRED)
-find_package(GLEW REQUIRED)
 find_package(GLUT REQUIRED)
-#include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
-
-#target_link_libraries(test_work ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} )
 target_link_libraries(test_work
     OpenGL::GL
     OpenGL::GLU
     GLUT::GLUT
-    GLEW::GLEW
     )
 
 
